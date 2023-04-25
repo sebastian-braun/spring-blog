@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+
 @RestController
 @RequestMapping("/api/posts")
 public class PostController {
@@ -28,6 +29,11 @@ public class PostController {
     @GetMapping
     public Iterable<Post> findAll() {
         return posts.findAll();
+    }
+
+    @GetMapping(produces = MediaType.TEXT_PLAIN_VALUE)
+    public String hello() {
+        return "hello world";
     }
 
     @GetMapping("/{id}")
