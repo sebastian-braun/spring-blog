@@ -31,7 +31,7 @@ public class PostController {
         return posts.findAll();
     }
 
-    @GetMapping(produces = MediaType.TEXT_PLAIN_VALUE)
+    @GetMapping
     public String hello() {
         return "hello world";
     }
