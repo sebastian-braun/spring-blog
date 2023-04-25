@@ -31,7 +31,7 @@ public class PostController {
         return posts.findAll();
     }
 
-    @GetMapping
+    @GetMapping("/hello")
     public String hello() {
         return "hello world";
     }
